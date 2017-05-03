@@ -33,14 +33,8 @@
     <!-- logging configuration -->
     <logging>
 
-        <file>
-            <name>/var/log/drachtio/drachtio_%Y%m%d_%H%M%S-%N.log</name>
-            <archive>/var/log/drachtio/archive</archive>
-            <size>50</size>
-             <maxSize>100</maxSize>
-            <auto-flush>true</auto-flush>
-        </file>
-
+        <console/>
+        
         <!-- sofia internal log level, from 0 (minimal) to 9 (verbose) -->
         <sofia-loglevel>3</sofia-loglevel>
         
