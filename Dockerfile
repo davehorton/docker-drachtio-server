@@ -21,8 +21,6 @@ RUN apt-get update \
   && cd /usr/local/bin \
   && rm -f timer ssltest parser
 
-VOLUME ["/var/log/drachtio"]
-
 COPY ./drachtio.conf.xml /
 COPY ./entrypoint.sh /
 
