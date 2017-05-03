@@ -23,7 +23,7 @@ RUN apt-get update \
 
 VOLUME ["/var/log/drachtio"]
 
-COPY ./drachtio.conf.xml /etc/drachtio.conf.xml
+COPY ./drachtio.conf.xml /
 COPY ./entrypoint.sh /
 
 ENTRYPOINT ["/entrypoint.sh"]

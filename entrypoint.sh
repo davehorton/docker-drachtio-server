@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+cp /drachtio.conf.xml /etc
+
 if [ "$1" = 'drachtio' ]; then
     shift
 
