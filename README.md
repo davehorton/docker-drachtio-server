@@ -9,6 +9,12 @@ To accept sip traffic on the default port 5060 tcp and udp, for example:
 $ docker run -d --rm --name drachtio --net=host \
     drachtio/drachtio-server drachtio --contact "sip:*;transport=tcp,udp" 
 ```
+The host networking driver only works on Linux hosts. Use the following command for Mac or Windows.
+```
+$ docker run -d --rm --name drachtio -p 5060:5060 -p 9022:9022 \
+    drachtio/drachtio-server drachtio --contact "sip:*;transport=tcp,udp"
+```
+
 To jump in to a running container with a bash shell:
 ```bash
 $ docker exec -ti drachtio /bin/bash
