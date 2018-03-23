@@ -10,7 +10,7 @@ $ docker run -d --rm --name drachtio --net=host \
     drachtio/drachtio-server drachtio --contact "sip:*;transport=tcp,udp" 
 ```
 The host networking driver only works on Linux hosts. Use the following command for Mac or Windows.
-```
+```bash
 $ docker run -d --rm --name drachtio -p 5060:5060 -p 9022:9022 \
     drachtio/drachtio-server drachtio --contact "sip:*;transport=tcp,udp"
 ```
@@ -21,12 +21,13 @@ $ docker exec -ti drachtio /bin/bash
 ```
 
 This image supports the following run-time command line parameters
-* `--contact` specifies a sip port and associated transport protocol.  Note that multiple --contact params may be used to cause the container to listen on multiple ports. 
-> Note: the value must be a quoted string in the form "[sip|sips]:*:<port>;transport=[tcp|udp|ws]"
+* `--contact` specifies a sip port and associated transport protocol.  Note that multiple --contact params may be used to cause the container to listen on multiple ports. (Note: the value must be a quoted string in the form "[sip|sips]:*:<port>;transport=[tcp|udp|ws]")
 * `--port` the tcp port to listen on for application connections (default: 9022)
 * `--secret` the shared secret to use to challenge application connections (default: cymru)
 * `--loglevel` the loglevel setting (default: info, loglevel may be any of: error, warning, info, and debug)
 * `--sofia-loglevel` the log level for the internal sofia sip stack (default: 3, may be 0-9 where 9 is most verbose)
+
+
 
 This image exposes the drachtio log directory (/var/log/drachtio)
 
