@@ -28,7 +28,6 @@ This image supports the following run-time command line parameters
 * `--sofia-loglevel` the log level for the internal sofia sip stack (default: 3, may be 0-9 where 9 is most verbose)
 
 
-
 This image exposes the drachtio log directory (/var/log/drachtio)
 
 An example of starting a container with advanced options:
